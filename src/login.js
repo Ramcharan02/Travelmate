@@ -1,29 +1,47 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './styles/login.css'
 function Poster(){
     return(
-    <div style={{width: '100%'}}>
-        <div style={{width: '40%', height: '744px', float: 'left', background: '#343538',padding:'120px'}}> 
+      <div>
+      <div class="split left">
+        <div className="centered"> 
             <img src={require('./logo.png')} />
-        </div>
-        <div style={{marginleft: '50%', height: '100px', background: 'white'}}> 
+            </div>
+      </div>
+
+      <div class="split right">
             <header> 
-                <h1 style={{textAlign:'center'}}>
-                HEllo
+                <h1 className='h1'>
+                Create Login
                 </h1>
                 <p style={{textAlign:'center'}}>Already Registered?Login </p>
             </header>
-            <div>
-            <form onSubmit={""}>
+      <hr/>      
+      <div className='centered'>      
+      <form onSubmit={""}>
         <label>
-          Name:
+        Full Name
           <input type="text" value={''} onChange={''} />
         </label>
-        <input type="submit" value="Submit" />
+        <label>
+        Email
+          <input type="text" value={''} onChange={''} />
+        </label>
+        <label>
+        Enter Password
+          <input type="text" value={''} onChange={''} />
+        </label>
+        <label>
+        Date of Birth
+          <input type="text" value={''} onChange={''} />
+        </label>
+        <button>Sign up</button> 
       </form>
-            </div>
-        </div>
-    </div>)
+      </div>
+    </div>  
+    </div>
+)
 }
 
 //  ReactDOM.render(Poster,document.getElementById("root"))
